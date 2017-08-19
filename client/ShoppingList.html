@@ -7,6 +7,17 @@
 			{{/each}}
 		{{else}}
 			<li>Uh, oh. Please add <a href="/recipe-book">recipes</a> to your menu.</li>
+			
+   			{{>charts}}
+
 		{{/each}}
 	</ul>
+</template>
+
+<template name="charts">
+    <canvas id="myChart" width="400" height="400"></canvas>
+    <canvas id="myChart2" width="400" height="400"></canvas>
+    <canvas id="myChart3" width="400" height="400"></canvas>
+    <canvas id="myChart4" width="400" height="400"></canvas>
+    <canvas id="myChart5" width="400" height="400"></canvas>
 </template>
