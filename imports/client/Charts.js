@@ -1,11 +1,11 @@
-Template.ShoppingList.onCreated(function(){
+Template.Charts.onCreated(function(){
 	var self = this;
 	self.autorun(function (){
 		self.subscribe('recipes');
 	});
 });
 
-Template.ShoppingList.helpers({
+Template.Charts.helpers({
 	shoppingList: ()=> {
 		return Recipes.find({inMenu: true});
 	}

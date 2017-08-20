@@ -1,6 +1,6 @@
 if(Meteor.isClient){
 	Accounts.onLogin(function(){
-		FlowRouter.go('recipe-book');
+		FlowRouter.go('summary');
 	});
 
 	Accounts.onLogout(function(){
@@ -21,11 +21,11 @@ FlowRouter.route('/', {
 	}
 });
 
-FlowRouter.route('/recipe-book', {
-	name: 'recipe-book',
+FlowRouter.route('/summary', {
+	name: 'summary',
 	action() {
 		if(Meteor.userId()){
-			FlowRouter.go('recipe-book');
+			FlowRouter.go('summary');
 		}
 		GAnalytics.pageview();
 		BlazeLayout.render('MainLayout', {main: 'Recipes'});
@@ -40,15 +40,15 @@ FlowRouter.route('/recipe/:id', {
 	}
 });
 
-FlowRouter.route('/menu', {
-	name: 'menu',
+FlowRouter.route('/report', {
+	name: 'report',
 	action() {
 		BlazeLayout.render('MainLayout', {main: 'Menu'});
 	}
 });
 
-FlowRouter.route('/shopping-list', {
-	name: 'shopping-list',
+FlowRouter.route('/charts', {
+	name: 'charts',
 	action() {
 		BlazeLayout.render('MainLayout', {main: 'ShoppingList'});
 	}
